@@ -24,7 +24,7 @@ async function searchNews(searchTerm){
     try{
         let query=searchTerm
         console.log('query is:',query);
-        const searchurl=`https://newsapi.org/v2/top-headlines?q=${query}&pageSize=3&apiKey=6e7e06236b6f422ebb6a0fa21532e4c5`
+        const searchurl=`https://newsapi.org/v2/top-headlines?q=${query}&pageSize=3&apiKey${api_key}`
         const response=await fetch(searchurl)
         const data=await response.json()
         console.log(data);
